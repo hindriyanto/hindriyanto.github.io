@@ -1,0 +1,146 @@
+@font-face {
+	font-family: "Soho Gothic Pro Bold";
+	src: url("fonts/SohoGothicPro-Bold.otf");
+}
+
+@font-face {
+	font-family: "Soho Gothic Pro";
+	src: url("fonts/SohoGothicPro-Regular.otf");
+}
+
+body {
+	background-color: rgb(240,240,240);
+	font-family: "Soho Gothic Pro";
+	justify-content: right;
+	color: rgb(24,24,24);
+}
+
+
+button {
+	font-family: "Soho Gothic Pro Bold";
+	font-weight: bold;
+	font-style: italic;
+	height: 40px;
+	width: 96px;
+	margin: 10px;
+	border: 1px solid rgb(24,24,24);
+	border-radius: 4px;
+	background-color: rgb(24,24,24);
+	color: white;
+}
+
+.grid-container-main {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 2px;
+  padding: 5px;
+  width: 90%;
+}
+
+.grid-container-main > div {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.item1 {
+  text-align: right; 
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-width: 800px;
+}
+
+.item2 {
+  text-align: right;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-width: 800px;
+}
+
+.item1 > img,
+.item2 > img, {
+	text-align: right;
+	float: right;
+}
+
+.item3 {
+  text-align: right;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  min-width: 800px;
+}
+
+.item4 {
+  text-align: center;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  background-color: rgb(160,160,160);
+  min-width: 400px;
+  border-radius: 10px;
+}
+
+h5 {
+	font-family: "soho gothic pro bold";
+	font-style: italic;
+	font-size: 24px;
+}
+
+ul,
+#listPOS {
+	width: 90%;
+	align: center;
+}
+
+#listfinal,
+#listPOS {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#listfinal > li,
+#listPOS > li {
+	font-size: 80%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 40px;
+}
+
+#listtotal {
+	font-size:90%;
+	margin-top: 24px;
+	margin-bottom: 32px;
+	border-top: 2px solid black;
+	font-family: "soho gothic pro bold";
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 40px;
+	width: 80%;
+}
+
+header {
+	background-color: rgb(200,200,200);
+	padding: 10px;
+	height: 64px;
+	min-width: 95%;
+}
+
+img {
+	margin-right: 5px;
+}
+
+h1 {
+	font-family: "soho gothic pro bold";
+	font-size: 20px;
+	font-style: italic;
+	border-bottom: 2px solid rgb(60,60,60);
+	padding-right: 20px;
+	padding-bottom: 5px;
+}
