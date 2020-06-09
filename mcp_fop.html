@@ -4,7 +4,7 @@
 	<head>
 		<title>Cart</title>
 		<link rel="icon" href="images/ff_ico.png">
-		<link rel="stylesheet" type="text/css" href="theme2.css">
+		<link rel="stylesheet" type="text/css" href="theme_mcpfop.css">
 	</head>
 	<body>
 		
@@ -14,14 +14,14 @@
 		</header>
 		<div class="grid-container-main">
 			<div class="item1">
-				<img src="images/unselected/mcp12_us.svg" width="30%" id="mcp12" onclick="addmcp12()">
-				<img src="images/unselected/mcp04_us.svg" width="30%" id="mcp4" onclick="addmcp4()">
-				<img src="images/unselected/mcp01_us.svg" width="30%" id="mcp0" onclick="addmcp0()">				
+				<img src="images/unselected/us_2_mcp12.png" width="30%" id="mcp12" onclick="addmcp12()">
+				<img src="images/unselected/us_2_mcp04.png" width="30%" id="mcp4" onclick="addmcp4()">
+				<img src="images/unselected/us_2_mcp01.png" width="30%" id="mcp0" onclick="addmcp0()">				
 			</div>
 			<div class="item2">
-				<img src="images/unselected/paycc_us.svg" width="30%" id="pay1" onclick="addpay1()">
-				<img src="images/unselected/payls_us.svg" width="30%"id="pay2" onclick="addpay2()">
-				<img src="images/unselected/paydd_us.svg" width="30%" id="pay3" onclick="addpay3()">
+				<img src="images/unselected/us_2_paycc.png" width="30%" id="pay1" onclick="addpay1()">
+				<img src="images/unselected/us_2_payls.png" width="30%"id="pay2" onclick="addpay2()">
+				<img src="images/unselected/us_2_paydd.png" width="30%" id="pay3" onclick="addpay3()">
 			</div>
 			<div class="item4">
 				<h5> SUMMARY </h5>
@@ -73,15 +73,15 @@
 				let a = cart4.indexOf(objmcp4)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					mcp4.src = "images/unselected/mcp04_us.svg";
+                    mcp4.src = "images/unselected/us_2_mcp04.png";
 				}
 				let b = cart4.indexOf(objmcp0)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					mcp0.src = "images/unselected/mcp01_us.svg";
+                    mcp0.src = "images/unselected/us_2_mcp01.png";
 				}
 				cart4.push(objmcp12)
-				mcp12.src = "images/selected/mcp12_s.svg";
+                mcp12.src = "images/selected/s_2_mcp12.png";
 				addpay1()
 				showItems()
 				console.log(cart4)
@@ -99,15 +99,15 @@
 				let a = cart4.indexOf(objmcp12)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					mcp12.src = "images/unselected/mcp12_us.svg";
+                    mcp12.src = "images/unselected/us_2_mcp12.png";
 				}
 				let b = cart4.indexOf(objmcp0)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					mcp0.src = "images/unselected/mcp01_us.svg";
+                    mcp0.src = "images/unselected/us_2_mcp01.png";
 				}
 				cart4.push(objmcp4)
-				mcp4.src = "images/selected/mcp04_s.svg";
+                mcp4.src = "images/selected/s_2_mcp04.png";
 				addpay1()
 				showItems()
 				console.log(cart4)
@@ -122,17 +122,17 @@
 						let a = cart4.indexOf(objmcp12)
 						if (a>=0) {
 							cart4.splice(a, 1)
-							mcp12.src = "images/unselected/mcp12_us.svg";
+                            mcp12.src = "images/unselected/us_2_mcp12.png";
 						}
 						let b = cart4.indexOf(objmcp4)
 						if (b>=0) {
 							cart4.splice(b, 1)
-							mcp4.src = "images/unselected/mcp04_us.svg";
+                            mcp4.src = "images/unselected/us_2_mcp04.png";
 						}
 						cart4.push(objmcp0)
-						mcp0.src = "images/selected/mcp01_s.svg";
-						payls.src = "images/unselected/payls_us.svg"
-						paydd.src = "images/unselected/paydd_us.svg"
+                        mcp0.src = "images/selected/s_2_mcp01.png";
+                        payls.src = "images/unselected/us_2_payls.png"
+                        paydd.src = "images/unselected/us_2_paydd.png"
 						showItems()
 						console.log(cart4)
 						alert('Flex contract not available with DD')
@@ -146,17 +146,17 @@
 						let a = cart4.indexOf(objmcp12)
 						if (a>=0) {
 							cart4.splice(a, 1)
-							mcp12.src = "images/unselected/mcp12_us.svg";
+                            mcp12.src = "images/unselected/us_2_mcp12.png";
 						}
 						let b = cart4.indexOf(objmcp4)
 						if (b>=0) {
 							cart4.splice(b, 1)
-							mcp4.src = "images/unselected/mcp04_us.svg";
+                            mcp4.src = "images/unselected/us_2_mcp04.png";
 						}
 						cart4.push(objmcp0)
-						mcp0.src = "images/selected/mcp01_s.svg";
-						payls.src = "images/unselected/payls_us.svg"
-						paydd.src = "images/unselected/paydd_us.svg"
+                        mcp0.src = "images/selected/s_2_mcp01.png";
+                        payls.src = "images/unselected/us_2_payls.png"
+                        paydd.src = "images/unselected/us_2_paydd.png"
 						showItems()
 						console.log(cart4)
 						alert('Flex contract not available with lumpsum')
@@ -173,15 +173,15 @@
 				let a = cart4.indexOf(objmcp12)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					mcp12.src = "images/unselected/mcp12_us.svg";
+                    mcp12.src = "images/unselected/us_2_mcp12.png";
 				}
 				let b = cart4.indexOf(objmcp4)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					mcp4.src = "images/unselected/mcp04_us.svg";
+                    mcp4.src = "images/unselected/us_2_mcp04.png";
 				}
 				cart4.push(objmcp0)
-				mcp0.src = "images/selected/mcp01_s.svg";
+                mcp0.src = "images/selected/s_2_mcp01.png";
 				addpay1()
 				showItems()
 				console.log(cart4)
@@ -199,15 +199,15 @@
 				let a = cart4.indexOf(objpay2)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					payls.src = "images/unselected/payls_us.svg"
+                    payls.src = "images/unselected/us_2_payls.png"
 				}
 				let b = cart4.indexOf(objpay3)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					paydd.src = "images/unselected/paydd_us.svg"
+                    paydd.src = "images/unselected/us_2_paydd.png"
 				}
 				cart4.push(objpay1)
-				paycc.src = "images/selected/paycc_s.svg"
+                paycc.src = "images/selected/s_2_paycc.png"
 				showItems()
 				console.log(cart4)
 			}
@@ -242,15 +242,15 @@
 				let a = cart4.indexOf(objpay1)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					paycc.src = "images/unselected/paycc_us.svg"
+                    paycc.src = "images/unselected/us_2_paycc.png"
 				}
 				let b = cart4.indexOf(objpay3)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					paydd.src = "images/unselected/paydd_us.svg"
+                    paydd.src = "images/unselected/us_2_paydd.png"
 				}
 				cart4.push(objpay2)
-				payls.src = "images/selected/payls_s.svg"
+                payls.src = "images/selected/s_2_payls.png"
 				showItems()
 				console.log(cart4)
 			}
@@ -285,15 +285,15 @@
 				let a = cart4.indexOf(objpay1)
 				if (a>=0) {
 					cart4.splice(a, 1)
-					paycc.src = "images/unselected/paycc_us.svg"
+                    paycc.src = "images/unselected/us_2_paycc.png"
 				}
 				let b = cart4.indexOf(objpay2)
 				if (b>=0) {
 					cart4.splice(b, 1)
-					payls.src = "images/unselected/payls_us.svg"
+                    payls.src = "images/unselected/us_2_payls.png"
 				}
 				cart4.push(objpay3)
-				paydd.src = "images/selected/paydd_s.svg"
+                paydd.src = "images/selected/s_2_paydd.png"
 				showItems()
 				console.log(cart4)
 			}
@@ -330,6 +330,7 @@
 				cart7 = JSON.parse(text)
 				console.log(cart7)
 			}
+
 			addmcp12()
 			showItems()
 			
