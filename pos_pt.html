@@ -4,7 +4,7 @@
 	<head>
 		<title>Initiation/PT Packages</title>
 		<link rel="icon" href="images/ff_ico.png">
-		<link rel="stylesheet" type="text/css" href="theme4.css">
+		<link rel="stylesheet" type="text/css" href="theme_pospt.css">
 	</head>
 	
 	<body>
@@ -15,18 +15,18 @@
 		<div class="grid-container-main">
 			<div class="item1">
 				<h1>Initiation Packages</h1>
-				<img src="images/unselected/posBF.svg" width="25%" id="posBF" onclick="addBF()">
-				<img src="images/unselected/posRP.svg" width="25%" id="posRP" onclick="addRP()">
+				<img src="images/unselected/us_3_bf.png" width="25%" id="posBF" onclick="addBF()">
+				<img src="images/unselected/us_3_rp.png" width="25%" id="posRP" onclick="addRP()">
 			</div>
 			<div class="item2">
 				<h1>Personal Training Packages</h1>
-				<img src="images/unselected/pt05.svg" width="25%" id="pt05" onclick="addPT05()">
-				<img src="images/unselected/pt11.svg" width="25%"id="pt11" onclick="addPT11()">
+				<img src="images/unselected/us_3_05.png" width="25%" id="pt05" onclick="addPT05()">
+				<img src="images/unselected/us_3_11.png" width="25%"id="pt11" onclick="addPT11()">
 			</div>
 			<div class="item3">
-				<img src="images/unselected/pt20.svg" width="25%" id="pt20" onclick="addPT20()">
-				<img src="images/unselected/pt30.svg" width="25%" id="pt30" onclick="addPT30()">
-				<img src="images/unselected/pt50.svg" width="25%" id="pt50" onclick="addPT50()">
+				<img src="images/unselected/us_3_20.png" width="25%" id="pt20" onclick="addPT20()">
+				<img src="images/unselected/us_3_30.png" width="25%" id="pt30" onclick="addPT30()">
+				<img src="images/unselected/us_3_50.png" width="25%" id="pt50" onclick="addPT50()">
 			</div>  
 			<div class="item4">
 				<h5> SUMMARY </h5>
@@ -70,7 +70,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === objBF) {
 						cartPOS.splice(i, 1)
-						posBF.src = "images/unselected/posBF.svg";
+                        posBF.src = "images/unselected/us_3_bf.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -79,35 +79,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(obj05)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let c = cartPOS.indexOf(obj11)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let d = cartPOS.indexOf(obj20)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let e = cartPOS.indexOf(obj30)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(objBF)
-				posBF.src = "images/selected/posBF_s.svg";
+                posBF.src = "images/selected/s_3_bf.png";
 				showItems()
 				console.log(cartPOS)
 			}	
@@ -117,7 +117,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === objRP) {
 						cartPOS.splice(i, 1)
-						posRP.src = "images/unselected/posRP.svg";
+                        posRP.src = "images/unselected/us_3_rp.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -126,35 +126,35 @@
 				let a = cartPOS.indexOf(objBF)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let b = cartPOS.indexOf(obj05)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let c = cartPOS.indexOf(obj11)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let d = cartPOS.indexOf(obj20)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let e = cartPOS.indexOf(obj30)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(objRP)
-				posRP.src = "images/selected/posRP_s.svg";
+                posRP.src = "images/selected/s_3_rp.png";
 				showItems()
 				console.log(cartPOS)
 			}
@@ -164,7 +164,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === obj05) {
 						cartPOS.splice(i, 1)
-						pt05.src = "images/unselected/pt05.svg";
+                        pt05.src = "images/unselected/us_3_05.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -173,35 +173,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(objBF)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let c = cartPOS.indexOf(obj11)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let d = cartPOS.indexOf(obj20)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let e = cartPOS.indexOf(obj30)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(obj05)
-				pt05.src = "images/selected/pt05_s.svg";
+                pt05.src = "images/selected/s_3_05.png";
 				showItems()
 				console.log(cartPOS)
 			}
@@ -211,7 +211,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === obj11) {
 						cartPOS.splice(i, 1)
-						pt11.src = "images/unselected/pt11.svg";
+                        pt11.src = "images/unselected/us_3_11.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -220,35 +220,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(objBF)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let c = cartPOS.indexOf(obj05)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let d = cartPOS.indexOf(obj20)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let e = cartPOS.indexOf(obj30)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(obj11)
-				pt11.src = "images/selected/pt11_s.svg";
+                pt11.src = "images/selected/s_3_11.png";
 				showItems()
 				console.log(cartPOS)
 			}
@@ -258,7 +258,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === obj20) {
 						cartPOS.splice(i, 1)
-						pt20.src = "images/unselected/pt20.svg";
+                        pt20.src = "images/unselected/us_3_20.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -267,35 +267,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(objBF)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let c = cartPOS.indexOf(obj05)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let d = cartPOS.indexOf(obj11)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let e = cartPOS.indexOf(obj30)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(obj20)
-				pt20.src = "images/selected/pt20_s.svg";
+                pt20.src = "images/selected/s_3_20.png";
 				showItems()
 				console.log(cartPOS)
 			}
@@ -305,7 +305,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === obj30) {
 						cartPOS.splice(i, 1)
-						pt30.src = "images/unselected/pt30.svg";
+                        pt30.src = "images/unselected/us_3_30.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -314,35 +314,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(objBF)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let c = cartPOS.indexOf(obj05)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let d = cartPOS.indexOf(obj11)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let e = cartPOS.indexOf(obj20)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let f = cartPOS.indexOf(obj50)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt50.src = "images/unselected/pt50.svg";
+                    pt50.src = "images/unselected/us_3_50.png";
 				}
 				cartPOS.push(obj30)
-				pt30.src = "images/selected/pt30_s.svg";
+                pt30.src = "images/selected/s_3_30.png";
 				showItems()
 				console.log(cartPOS)
 			}
@@ -352,7 +352,7 @@
 				for (let i = 0; i < cartPOS.length; i += 1) {
 					if (cartPOS[i] === obj50) {
 						cartPOS.splice(i, 1)
-						pt50.src = "images/unselected/pt50.svg";
+                        pt50.src = "images/unselected/us_3_50.png";
 						showItems()
 						console.log(cartPOS)
 						return
@@ -361,35 +361,35 @@
 				let a = cartPOS.indexOf(objRP)
 				if (a>=0) {
 					cartPOS.splice(a, 1)
-					posRP.src = "images/unselected/posRP.svg";
+                    posRP.src = "images/unselected/us_3_rp.png";
 				}
 				let b = cartPOS.indexOf(objBF)
 				if (b>=0) {
 					cartPOS.splice(b, 1)
-					posBF.src = "images/unselected/posBF.svg";
+                    posBF.src = "images/unselected/us_3_bf.png";
 				}
 				let c = cartPOS.indexOf(obj05)
 				if (c>=0) {
 					cartPOS.splice(c, 1)
-					pt05.src = "images/unselected/pt05.svg";
+                    pt05.src = "images/unselected/us_3_05.png";
 				}
 				let d = cartPOS.indexOf(obj11)
 				if (d>=0) {
 					cartPOS.splice(d, 1)
-					pt11.src = "images/unselected/pt11.svg";
+                    pt11.src = "images/unselected/us_3_11.png";
 				}
 				let e = cartPOS.indexOf(obj20)
 				if (e>=0) {
 					cartPOS.splice(e, 1)
-					pt20.src = "images/unselected/pt20.svg";
+                    pt20.src = "images/unselected/us_3_20.png";
 				}
 				let f = cartPOS.indexOf(obj30)
 				if (f>=0) {
 					cartPOS.splice(e, 1)
-					pt30.src = "images/unselected/pt30.svg";
+                    pt30.src = "images/unselected/us_3_30.png";
 				}
 				cartPOS.push(obj50)
-				pt50.src = "images/selected/pt50_s.svg";
+                pt50.src = "images/selected/s_3_50.png";
 				showItems()
 				console.log(cartPOS)
 			}
