@@ -74,19 +74,25 @@
 						for (let k = 0; k < cart7.length; k += 1) {
 							if (cart7[k].name === "Lifestyle (12mo)") {
 								cart.push(lumpsum12)
+								if (cartPOS[0] !== undefined) {
+								cart.push(cartPOS[0])
 								}
 								console.log(cart)
 								return
 							}
 							if (cart7[k].name === "Premier (4mo)") {
 								cart.push(lumpsum4)
+								if (cartPOS[0] !== undefined) {
+								cart.push(cartPOS[0])
 								}
 								console.log(cart)
 								return
 							}
 					}
-					if (cartPOS[0] !== undefined) {
-						cart.push(cartPOS[0])
+					}
+					}
+				if (cartPOS[0] !== undefined) {
+					cart.push(cartPOS[0])
 					}
 				console.log(cart)
 			}
