@@ -4,32 +4,32 @@
 	<head>
 		<title>Cart</title>
 		<link rel="icon" href="images/ff_ico.png">
-		<link rel="stylesheet" type="text/css" href="theme.css">
+		<link rel="stylesheet" type="text/css" href="theme_index.css">
 	</head>
 	
 	<body>
 		<header>
 			<button>BACK</button>
-			<img src="images/ff_ico.png" id="logo" height="48px" style="float:right">
+			<img src="images/ff_ico.png" height="48px" style="float:right">
 		</header>
 		<div class="grid-container-main">
 			<div class="item1">
-				<img src="images/unselected/base_option.svg" width="100%" id="base0" onclick="addBase()">
+				<img src="images/unselected/us_1_base.png" width="100%" id="base0" onclick="addBase()">
 			</div>
 			<div class="item2">
-				<img src="images/unselected/gf1_us.svg" width="22%" id="gf1" onclick="addGF1()">
-				<img src="images/unselected/gf2_us.svg" width="22%"id="gf2" onclick="addGF2()">
-				<img src="images/unselected/gf3_us.svg" width="22%" id="gf3" onclick="addGF3()">
-				<img src="images/unselected/gf4_us.svg" width="22%" id="gf4" onclick="addGF4()">
+				<img src="images/unselected/us_1_gf1.png" width="22%" id="gf1" onclick="addGF1()">
+				<img src="images/unselected/us_1_gf2.png" width="22%"id="gf2" onclick="addGF2()">
+				<img src="images/unselected/us_1_gf3.png" width="22%" id="gf3" onclick="addGF3()">
+				<img src="images/unselected/us_1_gf4.png" width="22%" id="gf4" onclick="addGF4()">
 			</div>
 			<div class="item3">
-			<img src="images/unselected/dual_id.svg" width="30%" id="axs1" onclick="addAxs1()">
-			<img src="images/unselected/dual_jkt.svg" width="30%" id="axs2" onclick="addAxs2()">
-			<img src="images/unselected/dual_area.svg" width="30%" id="axs3" onclick="addAxs3()">
+			<img src="images/unselected/us_1_dualindo.png" width="30%" id="axs1" onclick="addAxs1()">
+			<img src="images/unselected/us_1_dualjkt.png" width="30%" id="axs2" onclick="addAxs2()">
+			<img src="images/unselected/us_1_dualarea.png" width="30%" id="axs3" onclick="addAxs3()">
 			<br>
-			<img src="images/unselected/dual_micro.svg" width="30%" id="axs4" onclick="addAxs4()">
-			<img src="images/unselected/pass_plat.svg" width="30%" id="axs5" onclick="addAxs5()">
-			<img src="images/unselected/pass_prem.svg" width="30%" id="axs6" onclick="addAxs6()">			
+			<img src="images/unselected/us_1_dualmicro.png" width="30%" id="axs4" onclick="addAxs4()">
+			<img src="images/unselected/us_1_platpass.png" width="30%" id="axs5" onclick="addAxs5()">
+			<img src="images/unselected/us_1_prempass.png" width="30%" id="axs6" onclick="addAxs6()">			
 			</div>  
 			<div class="item4">
 				<h5> SUMMARY </h5>
@@ -81,7 +81,7 @@
 					}
 				}
 				cart.push(objBase)
-				base0.src="images/selected/base_selected.svg";
+                base0.src ="images/selected/s_1_base.png";
 				showItems()
 				console.log(cart)
 			}
@@ -91,7 +91,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objGF1) {
 						cart.splice(i, 1)
-						gf1.src = "images/unselected/gf1_us.svg";
+                        gf1.src = "images/unselected/us_1_gf1.png";
 						showItems()
 						console.log(cart)
 						return
@@ -102,8 +102,8 @@
 					cart.splice(a, 1)
 				}
 				cart.push(objGF1)
-				gf1.src = "images/selected/gf1_selected.svg";
-				gf4.src = "images/unselected/gf4_us.svg";
+                gf1.src = "images/selected/s_1_GF1.png";
+                gf4.src = "images/unselected/us_1_gf4.png";
 				showItems()
 				console.log(cart)
 			}			
@@ -113,7 +113,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objGF2) {
 						cart.splice(i, 1)
-						gf2.src = "images/unselected/gf2_us.svg";
+                        gf2.src = "images/unselected/us_1_gf2.png";
 						showItems()
 						console.log(cart)
 						return
@@ -124,8 +124,8 @@
 					cart.splice(a, 1)
 				}
 				cart.push(objGF2)
-				gf2.src = "images/selected/gf2_selected.svg";
-				gf4.src = "images/unselected/gf4_us.svg";
+                gf2.src = "images/selected/s_1_GF2.png";
+                gf4.src = "images/unselected/us_1_gf4.png";
 				showItems()
 				console.log(cart)
 			}
@@ -135,7 +135,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objGF3) {
 						cart.splice(i, 1)
-						gf3.src = "images/unselected/gf3_us.svg";
+                        gf3.src = "images/unselected/us_1_gf3.png";
 						showItems()
 						console.log(cart)
 						return
@@ -146,8 +146,8 @@
 					cart.splice(a, 1)
 				}
 				cart.push(objGF3)
-				gf3.src = "images/selected/gf3_selected.svg";
-				gf4.src = "images/unselected/gf4_us.svg";
+                gf3.src = "images/selected/s_1_GF3.png";
+                gf4.src = "images/unselected/us_1_gf4.png";
 				showItems()
 				console.log(cart)
 			}
@@ -157,7 +157,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objGF4) {
 						cart.splice(i, 1)
-						gf4.src = "images/unselected/gf4_us.svg";
+						gf4.src = "images/unselected/us_1_gf4.png";
 						showItems()
 						console.log(cart)
 						return
@@ -166,20 +166,20 @@
 				let a = cart.indexOf(objGF1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					gf1.src = "images/unselected/gf1_us.svg";
+                    gf1.src = "images/unselected/us_1_gf1.png";
 				}
 				let b = cart.indexOf(objGF2)
 				if (b>=0) {
 					cart.splice(b, 1)
-					gf2.src = "images/unselected/gf2_us.svg";
+                    gf2.src = "images/unselected/us_1_gf2.png";
 				}
 				let c = cart.indexOf(objGF3)
 				if (c>=0) {
 					cart.splice(c, 1)
-					gf3.src = "images/unselected/gf3_us.svg";
+                    gf3.src = "images/unselected/us_1_gf3.png";
 				}
 				cart.push(objGF4)
-				gf4.src = "images/selected/gfall_selected.svg";
+                gf4.src = "images/selected/s_1_GF4.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -189,7 +189,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs1) {
 						cart.splice(i, 1)
-						axs1.src = "images/unselected/dual_id.svg";
+                        axs1.src = "images/unselected/us_1_dualindo.png";
 						showItems()
 						console.log(cart)
 						return
@@ -198,30 +198,30 @@
 				let a = cart.indexOf(objAxs2)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs2.src = "images/unselected/dual_jkt.svg";
+                    axs2.src = "images/unselected/us_1_dualjkt.png";
 				}
 				let b = cart.indexOf(objAxs3)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs3.src = "images/unselected/dual_area.svg";
+                    axs3.src = "images/unselected/us_1_dualarea.png";
 				}
 				let c = cart.indexOf(objAxs4)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs4.src = "images/unselected/dual_micro.svg";
+                    axs4.src = "images/unselected/us_1_dualmicro.png";
 				}
 				let d = cart.indexOf(objAxs5)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs5.src = "images/unselected/pass_plat.svg";
+                    axs5.src = "images/unselected/us_1_platpass.png";
 				}
 				let e = cart.indexOf(objAxs6)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs6.src = "images/unselected/pass_prem.svg";
+                    axs6.src = "images/unselected/us_1_prempass.png";
 				}
 				cart.push(objAxs1)
-				axs1.src = "images/selected/dualid_selected.svg";
+                axs1.src = "images/selected/s_1_dualindo.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -231,7 +231,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs2) {
 						cart.splice(i, 1)
-						axs2.src = "images/unselected/dual_jkt.svg";
+                        axs2.src = "images/unselected/us_1_dualjkt.png";
 						showItems()
 						console.log(cart)
 						return
@@ -240,30 +240,30 @@
 				let a = cart.indexOf(objAxs1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs1.src = "images/unselected/dual_id.svg";
+                    axs1.src = "images/unselected/us_1_dualindo.png";
 				}
 				let b = cart.indexOf(objAxs3)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs3.src = "images/unselected/dual_area.svg";
+                    axs3.src = "images/unselected/us_1_dualarea.png";
 				}
 				let c = cart.indexOf(objAxs4)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs4.src = "images/unselected/dual_micro.svg";
+                    axs4.src = "images/unselected/us_1_dualmicro.png";
 				}
 				let d = cart.indexOf(objAxs5)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs5.src = "images/unselected/pass_plat.svg";
+                    axs5.src = "images/unselected/us_1_platpass.png";
 				}
 				let e = cart.indexOf(objAxs6)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs6.src = "images/unselected/pass_prem.svg";
+                    axs6.src = "images/unselected/us_1_prempass.png";
 				}
 				cart.push(objAxs2)
-				axs2.src = "images/selected/dualjkt_selected.svg";
+                axs2.src = "images/selected/s_1_dualjkt.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -273,7 +273,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs3) {
 						cart.splice(i, 1)
-						axs3.src = "images/unselected/dual_area.svg";
+                        axs3.src = "images/unselected/us_1_dualarea.png";
 						showItems()
 						console.log(cart)
 						return
@@ -282,30 +282,30 @@
 				let a = cart.indexOf(objAxs1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs1.src = "images/unselected/dual_id.svg";
+                    axs1.src = "images/unselected/us_1_dualindo.png";
 				}
 				let b = cart.indexOf(objAxs2)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs2.src = "images/unselected/dual_jkt.svg";
+                    axs2.src = "images/unselected/us_1_dualjkt.png";
 				}
 				let c = cart.indexOf(objAxs4)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs4.src = "images/unselected/dual_micro.svg";
+                    axs4.src = "images/unselected/us_1_dualmicro.png";
 				}
 				let d = cart.indexOf(objAxs5)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs5.src = "images/unselected/pass_plat.svg";
+                    axs5.src = "images/unselected/us_1_platpass.png";
 				}
 				let e = cart.indexOf(objAxs6)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs6.src = "images/unselected/pass_prem.svg";
+                    axs6.src = "images/unselected/us_1_prempass.png";
 				}
 				cart.push(objAxs3)
-				axs3.src = "images/selected/dualarea_selected.svg";
+                axs3.src = "images/selected/s_1_dualarea.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -315,7 +315,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs4) {
 						cart.splice(i, 1)
-						axs4.src = "images/unselected/dual_micro.svg";
+                        axs4.src = "images/unselected/us_1_dualmicro.png";
 						showItems()
 						console.log(cart)
 						return
@@ -324,30 +324,30 @@
 				let a = cart.indexOf(objAxs1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs1.src = "images/unselected/dual_id.svg";
+                    axs1.src = "images/unselected/us_1_dualindo.png";
 				}
 				let b = cart.indexOf(objAxs2)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs2.src = "images/unselected/dual_jkt.svg";
+                    axs2.src = "images/unselected/us_1_dualjkt.png";
 				}
 				let c = cart.indexOf(objAxs3)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs3.src = "images/unselected/dual_area.svg";
+                    axs3.src = "images/unselected/us_1_dualarea.png";
 				}
 				let d = cart.indexOf(objAxs5)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs5.src = "images/unselected/pass_plat.svg";
+                    axs5.src = "images/unselected/us_1_platpass.png";
 				}
 				let e = cart.indexOf(objAxs6)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs6.src = "images/unselected/pass_prem.svg";
+                    axs6.src = "images/unselected/us_1_prempass.png";
 				}
 				cart.push(objAxs4)
-				axs4.src = "images/selected/dualmicro_selected.svg";
+                axs4.src = "images/selected/s_1_dualmicro.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -357,7 +357,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs5) {
 						cart.splice(i, 1)
-						axs5.src = "images/unselected/pass_plat.svg";
+                        axs5.src = "images/unselected/us_1_platpass.png";
 						showItems()
 						console.log(cart)
 						return
@@ -366,30 +366,30 @@
 				let a = cart.indexOf(objAxs1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs1.src = "images/unselected/dual_id.svg";
+                    axs1.src = "images/unselected/us_1_dualindo.png";
 				}
 				let b = cart.indexOf(objAxs2)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs2.src = "images/unselected/dual_jkt.svg";
+                    axs2.src = "images/unselected/us_1_dualjkt.png";
 				}
 				let c = cart.indexOf(objAxs3)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs3.src = "images/unselected/dual_area.svg";
+                    axs3.src = "images/unselected/us_1_dualarea.png";
 				}
 				let d = cart.indexOf(objAxs4)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs4.src = "images/unselected/dual_micro.svg";
+                    axs4.src = "images/unselected/us_1_dualmicro.png";
 				}
 				let e = cart.indexOf(objAxs6)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs6.src = "images/unselected/pass_prem.svg";
+                    axs6.src = "images/unselected/us_1_prempass.png";
 				}
 				cart.push(objAxs5)
-				axs5.src = "images/selected/platpass_selected.svg";
+                axs5.src = "images/selected/s_1_platpass.png";
 				showItems()
 				console.log(cart)
 			}	
@@ -399,7 +399,7 @@
 				for (let i = 0; i < cart.length; i += 1) {
 					if (cart[i] === objAxs6) {
 						cart.splice(i, 1)
-						axs6.src = "images/unselected/pass_prem.svg";
+                        axs6.src = "images/unselected/us_1_prempass.png";
 						showItems()
 						console.log(cart)
 						return
@@ -408,30 +408,30 @@
 				let a = cart.indexOf(objAxs1)
 				if (a>=0) {
 					cart.splice(a, 1)
-					axs1.src = "images/unselected/dual_id.svg";
+                    axs1.src = "images/unselected/us_1_dualindo.png";
 				}
 				let b = cart.indexOf(objAxs2)
 				if (b>=0) {
 					cart.splice(b, 1)
-					axs2.src = "images/unselected/dual_jkt.svg";
+                    axs2.src = "images/unselected/us_1_dualjkt.png";
 				}
 				let c = cart.indexOf(objAxs3)
 				if (c>=0) {
 					cart.splice(c, 1)
-					axs3.src = "images/unselected/dual_area.svg";
+                    axs3.src = "images/unselected/us_1_dualarea.png";
 				}
 				let d = cart.indexOf(objAxs4)
 				if (d>=0) {
 					cart.splice(d, 1)
-					axs4.src = "images/unselected/dual_micro.svg";
+                    axs4.src = "images/unselected/us_1_dualmicro.png";
 				}
 				let e = cart.indexOf(objAxs5)
 				if (e>=0) {
 					cart.splice(e, 1)
-					axs5.src = "images/unselected/pass_plat.svg";
+                    axs5.src = "images/unselected/us_1_platpass.png";
 				}
 				cart.push(objAxs6)
-				axs6.src = "images/selected/prempass_selected.svg";
+                axs6.src = "images/selected/s_1_prempass.png";
 				showItems()
 				console.log(cart)
 			}	
