@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Cart</title>
+		<link rel="icon" href="images/ff_ico.png">
+		<link rel="stylesheet" type="text/css" href="theme2.css">
+	</head>
+	<body>
+		
+		<header>
+			<a href="index.html"><button>BACK</button></a>
+			<img src="images/ff_ico.png" height="48px" style="float:right">
+		</header>
+		<div class="grid-container-main">
+			<div class="item1">
+				<img src="images/unselected/mcp12_us.svg" width="30%" id="mcp12" onclick="addmcp12()">
+				<img src="images/unselected/mcp04_us.svg" width="30%" id="mcp4" onclick="addmcp4()">
+				<img src="images/unselected/mcp01_us.svg" width="30%" id="mcp0" onclick="addmcp0()">				
+			</div>
+			<div class="item2">
+				<img src="images/unselected/paycc_us.svg" width="30%" id="pay1" onclick="addpay1()">
+				<img src="images/unselected/payls_us.svg" width="30%"id="pay2" onclick="addpay2()">
+				<img src="images/unselected/paydd_us.svg" width="30%" id="pay3" onclick="addpay3()">
+			</div>
+			<div class="item4">
+				<h5> SUMMARY </h5>
+				</ul>
+				<ul id="listfinal">
+				</ul>
+				<div id="listtotal">
+				</div>
+				<div>
+					<a href="pos_pt.html" onclick="saveto()"><button>PROCEED</button></a>
+				</div>
+		</div>
+		</div>
+
+				
+		<script>
+			text = localStorage.getItem('cart3')
+			cart4 = JSON.parse(text)
+			console.log(cart4)
+			
+			cartpay = []
+			const mcp12 = document.getElementById('mcp12')
+			const mcp4 = document.getElementById('mcp4')
+			const mcp0 = document.getElementById('mcp0')
+			const paycc = document.getElementById('pay1')
+			const payls = document.getElementById('pay2')
+			const paydd = document.getElementById('pay3')
+			const listItems = document.getElementById('listfinal')
+			const listpay = document.getElementById('listpay')
+
+			objmcp12 = {name: 'Lifestyle (12mo)', price: 0}
+			objmcp4 = {name: 'Premier (4mo)', price: 80000}
+			objmcp0 = {name: 'Flexible contract', price: 100000}
+			objpay1 = {name: 'Credit card', price: 0}
+			objpay2 = {name: 'Lumpsum', price: 0}
+			objpay2a = {name: 'Additional 2 months free', price: 0}
+			objpay3 = {name: 'Direct debit', price: 100000}
+
+
+			//add mcp12
+			function addmcp12() {
+				for (let i = 0; i < cart4.length; i += 1) {	
+					if (cart4[i] === objmcp12) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objmcp4)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					mcp4.src = "images/unselected/mcp04_us.svg";
+				}
+				let b = cart4.indexOf(objmcp0)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					mcp0.src = "images/unselected/mcp01_us.svg";
+				}
+				cart4.push(objmcp12)
+				mcp12.src = "images/selected/mcp12_s.svg";
+				addpay1()
+				showItems()
+				console.log(cart4)
+			}
+			
+			//add mcp4
+			function addmcp4() {
+				for (let i = 0; i < cart4.length; i += 1) {
+					if (cart4[i] === objmcp4) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objmcp12)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					mcp12.src = "images/unselected/mcp12_us.svg";
+				}
+				let b = cart4.indexOf(objmcp0)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					mcp0.src = "images/unselected/mcp01_us.svg";
+				}
+				cart4.push(objmcp4)
+				mcp4.src = "images/selected/mcp04_s.svg";
+				addpay1()
+				showItems()
+				console.log(cart4)
+			}
+
+			//add mcp0
+			function addmcp0() {
+				for (let j = 0; j < cart4.length; j += 1) {
+					if (cart4[j] === objpay2) {
+						cart4.splice(j, 1)
+						addpay1()
+						let a = cart4.indexOf(objmcp12)
+						if (a>=0) {
+							cart4.splice(a, 1)
+							mcp12.src = "images/unselected/mcp12_us.svg";
+						}
+						let b = cart4.indexOf(objmcp4)
+						if (b>=0) {
+							cart4.splice(b, 1)
+							mcp4.src = "images/unselected/mcp04_us.svg";
+						}
+						cart4.push(objmcp0)
+						mcp0.src = "images/selected/mcp01_s.svg";
+						payls.src = "images/unselected/payls_us.svg"
+						paydd.src = "images/unselected/paydd_us.svg"
+						showItems()
+						console.log(cart4)
+						alert('Flex contract not available with DD')
+						return
+					}
+				}
+				for (let k = 0; k < cart4.length; k += 1) {
+					if (cart4[k] === objpay3) {
+						cart4.splice(k, 1)
+						addpay1()
+						let a = cart4.indexOf(objmcp12)
+						if (a>=0) {
+							cart4.splice(a, 1)
+							mcp12.src = "images/unselected/mcp12_us.svg";
+						}
+						let b = cart4.indexOf(objmcp4)
+						if (b>=0) {
+							cart4.splice(b, 1)
+							mcp4.src = "images/unselected/mcp04_us.svg";
+						}
+						cart4.push(objmcp0)
+						mcp0.src = "images/selected/mcp01_s.svg";
+						payls.src = "images/unselected/payls_us.svg"
+						paydd.src = "images/unselected/paydd_us.svg"
+						showItems()
+						console.log(cart4)
+						alert('Flex contract not available with lumpsum')
+						return
+					}
+				}
+				for (let i = 0; i < cart4.length; i += 1) {	
+					if (cart4[i] === objmcp0) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objmcp12)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					mcp12.src = "images/unselected/mcp12_us.svg";
+				}
+				let b = cart4.indexOf(objmcp4)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					mcp4.src = "images/unselected/mcp04_us.svg";
+				}
+				cart4.push(objmcp0)
+				mcp0.src = "images/selected/mcp01_s.svg";
+				addpay1()
+				showItems()
+				console.log(cart4)
+			}
+			
+			//add pay by cc
+			function addpay1() {
+				for (let i = 0; i < cart4.length; i += 1) {	
+					if (cart4[i] === objpay1) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objpay2)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					payls.src = "images/unselected/payls_us.svg"
+				}
+				let b = cart4.indexOf(objpay3)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					paydd.src = "images/unselected/paydd_us.svg"
+				}
+				cart4.push(objpay1)
+				paycc.src = "images/selected/paycc_s.svg"
+				showItems()
+				console.log(cart4)
+			}
+			
+			//add pay by ls
+			function addpay2() {
+				for (let j = 0; j < cart4.length; j += 1) {	
+					if (cart4[j] === objmcp0) {
+						for (let k = 0; k < cart4.length; k += 1) {
+							if (cart4[k] === objpay1) {
+							showItems()
+							console.log(cart4)
+							alert("Not available with Flex commitment")
+							return
+							} else {
+								addpay1()
+								showItems()
+								console.log(cart4)
+								alert('Not available with Flex commitment')
+							return
+							}
+						}	
+				}
+				}
+				for (let i = 0; i < cart4.length; i += 1) {	
+					if (cart4[i] === objpay2) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objpay1)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					paycc.src = "images/unselected/paycc_us.svg"
+				}
+				let b = cart4.indexOf(objpay3)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					paydd.src = "images/unselected/paydd_us.svg"
+				}
+				cart4.push(objpay2)
+				payls.src = "images/selected/payls_s.svg"
+				showItems()
+				console.log(cart4)
+			}
+			
+			//add pay by dd
+			function addpay3() {
+				for (let j = 0; j < cart4.length; j += 1) {	
+					if (cart4[j] === objmcp0) {
+						for (let k = 0; k < cart4.length; k += 1) {
+							if (cart4[k] === objpay1) {
+							showItems()
+							console.log(cart4)
+							alert("Not available with Flex commitment")
+							return
+							} else {
+								addpay1()
+								showItems()
+								console.log(cart4)
+								alert('Not available with Flex commitment')
+							return
+							}
+						}	
+				}
+				}
+				for (let i = 0; i < cart4.length; i += 1) {	
+					if (cart4[i] === objpay3) {
+						showItems()
+						console.log(cart4)
+						return
+					}
+				}	
+				let a = cart4.indexOf(objpay1)
+				if (a>=0) {
+					cart4.splice(a, 1)
+					paycc.src = "images/unselected/paycc_us.svg"
+				}
+				let b = cart4.indexOf(objpay2)
+				if (b>=0) {
+					cart4.splice(b, 1)
+					payls.src = "images/unselected/payls_us.svg"
+				}
+				cart4.push(objpay3)
+				paydd.src = "images/selected/paydd_s.svg"
+				showItems()
+				console.log(cart4)
+			}
+			
+			//show items
+			function showItems() {
+				let str = ''
+				for (let i = 0; i < cart4.length; i +=1) {
+					str += `<li><span>${cart4[i].name}</span> <span>${cart4[i].price}</span></li>`
+				}
+				str2 = `<span>Your monthly dues</span> <span>${getTotal()}</span>`
+				listItems.innerHTML = str
+				listtotal.innerHTML = str2
+			}
+			
+			//get total price
+			function getTotal() {
+				let total = 0
+				for (let i = 0; i < cart4.length; i += 1) {
+					total += cart4[i].price
+				}
+				total1 = JSON.stringify(total)
+				localStorage.setItem('total', total1)
+				return total
+			}	
+
+			//save to localstorage
+			function saveto() {
+				cart5 = JSON.stringify(cart4)
+				localStorage.setItem('cart6', cart5)
+			
+				//retrieve from localstorage
+				text = localStorage.getItem('cart6')
+				cart7 = JSON.parse(text)
+				console.log(cart7)
+			}
+			addmcp12()
+			showItems()
+			
+		</script>
+	</body>
+	
+</html>

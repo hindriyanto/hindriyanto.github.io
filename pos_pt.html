@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Initiation/PT Packages</title>
+		<link rel="icon" href="images/ff_ico.png">
+		<link rel="stylesheet" type="text/css" href="theme4.css">
+	</head>
+	
+	<body>
+		<header>
+			<a href="index.html"><button>BACK</button></a>
+			<img src="images/ff_ico.png" height="48px" style="float:right">
+		</header>
+		<div class="grid-container-main">
+			<div class="item1">
+				<h1>Initiation Packages</h1>
+				<img src="images/unselected/posBF.svg" width="25%" id="posBF" onclick="addBF()">
+				<img src="images/unselected/posRP.svg" width="25%" id="posRP" onclick="addRP()">
+			</div>
+			<div class="item2">
+				<h1>Personal Training Packages</h1>
+				<img src="images/unselected/pt05.svg" width="25%" id="pt05" onclick="addPT05()">
+				<img src="images/unselected/pt11.svg" width="25%"id="pt11" onclick="addPT11()">
+			</div>
+			<div class="item3">
+				<img src="images/unselected/pt20.svg" width="25%" id="pt20" onclick="addPT20()">
+				<img src="images/unselected/pt30.svg" width="25%" id="pt30" onclick="addPT30()">
+				<img src="images/unselected/pt50.svg" width="25%" id="pt50" onclick="addPT50()">
+			</div>  
+			<div class="item4">
+				<h5> SUMMARY </h5>
+				</ul>
+				<ul id="listfinal">
+				</ul>
+				<div id="listtotal">
+				</div>
+				<div id="listPOS">
+				</div>
+				<div>
+					<br>
+					<a href="finalpayment.html" onclick="saveto()"><button>PROCEED</button></a>
+				</div>
+		</div>
+		
+
+		<script>
+			text = localStorage.getItem('cart6')
+			cart6 = JSON.parse(text)
+			console.log(cart6)
+			
+			text = localStorage.getItem('total')
+			total2 = JSON.parse(text)
+			console.log(total2)
+			
+			cartPOS = []
+			const listItems = document.getElementById('listfinal')
+			const listPOS = document.getElementById('listPOS')
+			
+			objBF = {name: 'Body First', price: 450000}
+			objRP = {name: 'Results Pack', price: 1450000}
+			obj05 = {name: 'PT 5 sessions', price: 1826000}
+			obj11 = {name: 'PT 11 sessions', price: 3722000}
+			obj20 = {name: 'PT 20 sessions + 3 free', price: 6377000}
+			obj30 = {name: 'PT 30 sessions + 3 free', price: 9189000}
+			obj50 = {name: 'PT 50 sessions + 3 free', price: 14194000}
+			
+			//add BF
+			function addBF() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === objBF) {
+						cartPOS.splice(i, 1)
+						posBF.src = "images/unselected/posBF.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(obj05)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let c = cartPOS.indexOf(obj11)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let d = cartPOS.indexOf(obj20)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let e = cartPOS.indexOf(obj30)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(objBF)
+				posBF.src = "images/selected/posBF_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}	
+			
+			//add RP
+			function addRP() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === objRP) {
+						cartPOS.splice(i, 1)
+						posRP.src = "images/unselected/posRP.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objBF)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let b = cartPOS.indexOf(obj05)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let c = cartPOS.indexOf(obj11)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let d = cartPOS.indexOf(obj20)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let e = cartPOS.indexOf(obj30)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(objRP)
+				posRP.src = "images/selected/posRP_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//add pt05
+			function addPT05() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === obj05) {
+						cartPOS.splice(i, 1)
+						pt05.src = "images/unselected/pt05.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(objBF)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let c = cartPOS.indexOf(obj11)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let d = cartPOS.indexOf(obj20)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let e = cartPOS.indexOf(obj30)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(obj05)
+				pt05.src = "images/selected/pt05_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//add pt11
+			function addPT11() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === obj11) {
+						cartPOS.splice(i, 1)
+						pt11.src = "images/unselected/pt11.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(objBF)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let c = cartPOS.indexOf(obj05)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let d = cartPOS.indexOf(obj20)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let e = cartPOS.indexOf(obj30)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(obj11)
+				pt11.src = "images/selected/pt11_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//add pt20
+			function addPT20() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === obj20) {
+						cartPOS.splice(i, 1)
+						pt20.src = "images/unselected/pt20.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(objBF)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let c = cartPOS.indexOf(obj05)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let d = cartPOS.indexOf(obj11)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let e = cartPOS.indexOf(obj30)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(obj20)
+				pt20.src = "images/selected/pt20_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//add pt30
+			function addPT30() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === obj30) {
+						cartPOS.splice(i, 1)
+						pt30.src = "images/unselected/pt30.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(objBF)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let c = cartPOS.indexOf(obj05)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let d = cartPOS.indexOf(obj11)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let e = cartPOS.indexOf(obj20)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let f = cartPOS.indexOf(obj50)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt50.src = "images/unselected/pt50.svg";
+				}
+				cartPOS.push(obj30)
+				pt30.src = "images/selected/pt30_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//add pt50
+			function addPT50() {
+				for (let i = 0; i < cartPOS.length; i += 1) {
+					if (cartPOS[i] === obj50) {
+						cartPOS.splice(i, 1)
+						pt50.src = "images/unselected/pt50.svg";
+						showItems()
+						console.log(cartPOS)
+						return
+					}
+				}	
+				let a = cartPOS.indexOf(objRP)
+				if (a>=0) {
+					cartPOS.splice(a, 1)
+					posRP.src = "images/unselected/posRP.svg";
+				}
+				let b = cartPOS.indexOf(objBF)
+				if (b>=0) {
+					cartPOS.splice(b, 1)
+					posBF.src = "images/unselected/posBF.svg";
+				}
+				let c = cartPOS.indexOf(obj05)
+				if (c>=0) {
+					cartPOS.splice(c, 1)
+					pt05.src = "images/unselected/pt05.svg";
+				}
+				let d = cartPOS.indexOf(obj11)
+				if (d>=0) {
+					cartPOS.splice(d, 1)
+					pt11.src = "images/unselected/pt11.svg";
+				}
+				let e = cartPOS.indexOf(obj20)
+				if (e>=0) {
+					cartPOS.splice(e, 1)
+					pt20.src = "images/unselected/pt20.svg";
+				}
+				let f = cartPOS.indexOf(obj30)
+				if (f>=0) {
+					cartPOS.splice(e, 1)
+					pt30.src = "images/unselected/pt30.svg";
+				}
+				cartPOS.push(obj50)
+				pt50.src = "images/selected/pt50_s.svg";
+				showItems()
+				console.log(cartPOS)
+			}
+			
+			//show items
+			function showItems() {
+				let str = ''
+				for (let i = 0; i < cart6.length; i +=1) {
+					str += `<li><span>${cart6[i].name}</span> <span>${cart6[i].price}</span></li>`
+				}
+				str2 = `<span>Your monthly dues</span> <span>${getTotal()}</span>`
+				
+				let str3 = ''
+				for (let j = 0; j < cartPOS.length; j +=1) {
+					str3 += `<li><span>${cartPOS[j].name}</span> <span>${cartPOS[j].price}</span></li>`
+				}
+				listItems.innerHTML = str
+				listtotal.innerHTML = str2
+				listPOS.innerHTML = str3
+			}
+			
+			//get total price
+			function getTotal() {
+				let total = 0
+				for (let i = 0; i < cart6.length; i += 1) {
+					total += cart6[i].price
+				}
+				total1 = JSON.stringify(total)
+				localStorage.setItem('total', total1)
+				return total
+			}
+			
+			//save to localstorage
+			function saveto() {
+				savePOS = JSON.stringify(cartPOS)
+				localStorage.setItem('cartPOS', savePOS)
+			
+				//retrieve from localstorage
+				text = localStorage.getItem('cartPOS')
+				retrPOS = JSON.parse(text)
+				console.log(retrPOS)
+			}
+			
+			showItems()
+		</script>
+	</body>

@@ -1,0 +1,76 @@
+@font-face {
+	font-family: "Soho Gothic Pro Bold";
+	src: url("fonts/SohoGothicPro-Bold.otf");
+}
+
+@font-face {
+	font-family: "Soho Gothic Pro";
+	src: url("fonts/SohoGothicPro-Regular.otf");
+}
+
+body {
+	background-color: rgb(240,240,240);
+	font-family: "Soho Gothic Pro";
+	justify-content: center;
+	color: rgb(24,24,24);
+}
+
+
+button {
+	font-family: "Soho Gothic Pro Bold";
+	font-weight: bold;
+	font-style: italic;
+	height: 40px;
+	width: 96px;
+	margin: 10px;
+	border: 1px solid rgb(24,24,24);
+	border-radius: 4px;
+	background-color: rgb(24,24,24);
+	color: white;
+}
+
+h5 {
+	font-family: "soho gothic pro bold";
+	font-style: italic;
+	font-size: 24px;
+}
+
+#listfinal,
+#listtotal,
+#listpaytoday,
+#listpaytoday2 {
+	list-style: none;
+    margin-left: 20%;
+    padding: 0;
+	width: 50%
+}
+
+#listfinal > li,
+#listpaytoday > li {
+	font-size: 80%;
+	display: flex;
+	padding: 4px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#listtotal > li,
+#listpaytoday2 > li {
+	font-size:80%;
+	border-top: 2px solid rgb(90,90,90);
+	font-family: "soho gothic pro bold";
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.totpay {
+	color: rgb(058,170,053);
+	font-size: 120%;
+}
+
+header {
+	background-color: rgb(200,200,200);
+	padding: 10px;
+	height: 64px;
+}
