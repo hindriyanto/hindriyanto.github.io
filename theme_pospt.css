@@ -134,6 +134,7 @@ header {
 
 img {
 	margin-right: 5px;
+	cursor: pointer;
 }
 
 h1 {
